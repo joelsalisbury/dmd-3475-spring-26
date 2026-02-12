@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Week 3 — Coding for the Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            max-width: 70em;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Week 3: Control Flow - Corrected</h1>
+
+    <p>
+        <a href="index.html">View Original</a>
+=       This is a corrected version of the week 3 code. It includes input validation and additional comments for clarity.
+    </p>
+    <script>
+        console.log("Welcome to week 3");
+
+        // Basic variables
+        var username = "Joel";
+        console.log("My name is " + username);
+
+        // Ask for age
+        var age = prompt("What is your age?");
+        age = parseInt(age);
+
+        // Ask for years
+        var years = prompt("Enter a number of years...");
+        years = parseInt(years);
+
+        // Validate input
+        if (isNaN(age) || isNaN(years)) {
+            alert("One or more values were not numbers.");
+            console.log("Cannot calculate future age due to invalid input.");
+        } else {
+            console.log("My age is " + age);
+
+            // Calculate future age
+            var newAge = age + years;
+            console.log("In " + years + " years, you will be " + newAge);
+
+            // Drinking age check
+            var drinkingAge = 21;
+            var canDrink = newAge >= drinkingAge;
+
+            if (canDrink) {
+                console.log("In " + years + " years, you can legally drink.");
+            } else {
+                console.log("In " + years + " years, you cannot legally drink.");
+            }
+        }
+
+        console.log("Program finished. Refresh the page to run again.");
+    </script>
+</body>
+
+</html>

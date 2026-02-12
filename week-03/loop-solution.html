@@ -1,0 +1,45 @@
+<script>
+  console.log("Welcome to week 3");
+
+  // Basic variables
+  var username = "Joel";
+  console.log("My name is " + username);
+
+  // Ask for age
+  var age = prompt("What is your age?");
+  age = parseInt(age);
+
+  // Keep asking until age is a number
+  while (isNaN(age)) {
+    age = prompt("Please enter a NUMBER for your age");
+    age = parseInt(age);
+  }
+
+  // Ask for years
+  var years = prompt("Enter a number of years...");
+  years = parseInt(years);
+
+  // Keep asking until years is a number
+  while (isNaN(years)) {
+    years = prompt("Please enter a NUMBER of years");
+    years = parseInt(years);
+  }
+
+  console.log("My age is " + age);
+
+  // Calculate future age
+  var newAge = age + years;
+  console.log("In " + years + " years, you will be " + newAge);
+
+  // Drinking age check
+  var drinkingAge = 21;
+  var canDrink = newAge >= drinkingAge;
+
+  if (canDrink) {
+    console.log("In " + years + " years, you can legally drink.");
+  } else {
+    console.log("In " + years + " years, you cannot legally drink.");
+  }
+
+  console.log("Program finished. Refresh the page to run again.");
+</script>

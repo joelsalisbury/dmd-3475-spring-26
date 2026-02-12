@@ -36,7 +36,7 @@
     var age = prompt("What is your age?");
     console.log(parseInt(age));
 
-    if (typeof parseInt(age) != Number) {
+    if (isNaN(parseInt(age))) {
         alert("that's not a number!");
     }
 
@@ -45,7 +45,7 @@
 
     var years = prompt("Enter a number of years...");
 
-    if(typeof parseInt(years) != Number) {
+    if (isNaN(parseInt(years))) {
         alert("that's not a number!");
     }
 
